@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    display: grid;
+    margin: 0;
+    padding-right: 0;
+    height: 100vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: 3rem 6.5rem auto 4rem 4rem;
+    grid-template-areas: 
+        "nav1"
+        "order1"
+        "main1"
+        "pagina1"
+        "footer1";
+}
+.nav1 {
+    grid-area: nav1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: blue;
+    height: 3rem;
+}
+.nav1 p {
+    margin: 0;
+    padding-left: 1rem;
+}
+.nav1 i {
+    padding-right: 1rem;
+}
+.order1 {
+    grid-area: order1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: red;
+    
+}
+article p  {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    margin: .5rem;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown button {
+    display: flex;
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    width: 25rem;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    min-width: 150px;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 8px;
+    text-decoration: none;
+    color: black;
+}
+
+.dropdown-menu a:hover {
+    background-color: #f1f1f1;
+}
+
+.main1 {
+    display: flex;
+    flex-direction: column;
+    grid-area: main1;
+    justify-content: center;
+    align-items: center;
+    background: green;
+    
+}
+.main1 section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 95%;
+    width: 90%;
+    /* width: 22rem; */
+    box-shadow: 2px 1px 5px black;
+}
+.main1 section p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 1.5rem;
+    width: 100%;
+    margin: 0;
+    background-color: aqua;
+    
+}
+.main1 section article a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3rem;
+    width: 8rem;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: aqua; 
+    text-decoration: none;
+    color: black;
+    margin: 1rem;
+    
+}
+
+/* .main1 section div img {
+    
+    box-shadow: 2px 1px 5px black;
+} */
+.img1 {
+    justify-self: center;
+    align-items: center;
+    width: 100%;    
+    flex: 1 0 0;
+    background-color: brown;
+}
+.pagina1 {
+    grid: pagina1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: yellow;
+}
+.footer1 {
+    grid-area: footer1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: purple;
+}
