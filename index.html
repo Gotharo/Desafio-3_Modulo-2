@@ -40,48 +40,88 @@
   </head>
   <body>
     <nav class="nav1">
-      <p>Electric Cars</p>
-      <i>sandwitch</i>
+      <div>
+        <i class="fa-solid fa-car"></i>
+        <p>Electric Cars</p>
+      </div>
+      <i class="fas fa-bars"></i> 
     </nav>
     <article class="order1">
-        <p>ordenar por</p>
-        <div class="dropdown">
-            <button onclick="toggleDropdown()">Precio</button> 
-            <div class="dropdown-menu" id="menu">
-                <a href="#">Precio</a>
-                <a href="#">Nombre</a>
-                <a href="#">Fecha</a>
-            </div>
+      <p>Ordenar Por:</p>
+      <div class="select-container">
+        <div class="select-trigger">
+          <span>Precio</span>
+          <i class="arrow-icon">▼</i>
         </div>
-          
+        <div class="select-options">
+          <ul>
+            <li>Modelo</li>
+            <li>Marca</li>
+            <li>Año</li>
+          </ul>
+        </div>
+      </div>
     </article>
     <main class="main1">
-        <section>
-            <div class="img1">
-                <img src="#" alt="CAR">
-            </div>
-            <p> model city car</p>
-            <article> <a href="#">ver mas</a></article>
-        </section>
+      <section>
+        <div class="img1">
+          <img src="#" alt="CAR" />
+        </div>
+        <p>Model: City Car</p>
+        <article><a href="#">ver mas</a></article>
+      </section>
     </main>
     <section class="pagina1">
-        <p>1 2 3</p>
+      <div class="pagination">
+        <a href="#">&laquo;</a>
+        <a href="#" class="active">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">&raquo;</a>
+      </div>
     </section>
     <footer class="footer1">
-        <p>todos los derechos reservados</p>
+      <div class="social-icons">
+        <a href="#" target="_blank" class="social-link">
+          <i class="fab fa-facebook"></i>
+        </a>
+        <a href="#" target="_blank" class="social-link">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="#" target="_blank" class="social-link">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+      <p>Todos los derechos reservados</p>
     </footer>
     <script>
-        function toggleDropdown() {
-            var menu = document.getElementById("menu");
-            menu.style.display = (menu.style.display === "block") ? "none" : "block";
-        }
+      // Código JavaScript del immersive anterior
+      const selectContainer = document.querySelector(".select-container");
+      const selectTrigger = document.querySelector(".select-trigger");
+      const selectOptions = document.querySelector(".select-options");
+      const selectItems = document.querySelectorAll(".select-options li");
 
-        document.addEventListener("click", function(event) {
-            var dropdown = document.querySelector(".dropdown");
-            if (!dropdown.contains(event.target)) {
-                document.getElementById("menu").style.display = "none";
-            }
+      selectTrigger.addEventListener("click", () => {
+        selectContainer.classList.toggle("active");
+      });
+
+      selectItems.forEach((item) => {
+        item.addEventListener("click", () => {
+          const selectedValue = item.textContent;
+          selectTrigger.querySelector("span").textContent = selectedValue;
+          selectContainer.classList.remove("active");
         });
+      });
+
+      // Cerrar el dropdown cuando se hace clic fuera de él
+      document.addEventListener("click", (event) => {
+        if (
+          !selectContainer.contains(event.target) &&
+          !selectOptions.contains(event.target)
+        ) {
+          selectContainer.classList.remove("active");
+        }
+      });
     </script>
   </body>
 </html>

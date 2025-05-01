@@ -1,128 +1,167 @@
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 body {
-    display: grid;
-    margin: 0;
-    padding-right: 0;
-    height: 100vh;
-    grid-template-columns: 1fr;
-    grid-template-rows: 3rem 6.5rem auto 4rem 4rem;
-    grid-template-areas: 
-        "nav1"
-        "order1"
-        "main1"
-        "pagina1"
-        "footer1";
+  display: grid;
+  margin: 0;
+  padding-right: 0;
+  height: 100vh;
+  grid-template-columns: 1fr;
+  grid-template-rows: 3rem 6.5rem auto 4rem 6rem;
+  grid-template-areas:
+    "nav1"
+    "order1"
+    "main1"
+    "pagina1"
+    "footer1";
 }
 .nav1 {
-    grid-area: nav1;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: blue;
-    height: 3rem;
+  grid-area: nav1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: blue;
+  height: 3rem;
 }
-.nav1 p {
-    margin: 0;
-    padding-left: 1rem;
+.nav1 div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.5rem;
+  padding: 0;
+}
+.nav1 div p {
+  margin: 0;
+  margin-left: 0.1rem;
 }
 .nav1 i {
-    padding-right: 1rem;
+  padding-right: 0.5rem;
+  font-size: 1.1rem;
 }
 .order1 {
-    grid-area: order1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background: red;
-    
+  grid-area: order1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: red;
 }
-article p  {
-    display: flex;
-    justify-content: center;
-    align-self: center;
-    margin: .5rem;
+.order1 p {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  font-size: 1.1rem;
+  margin-top: 0.1rem;
+  font-weight: 400;
 }
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-.dropdown button {
-    display: flex;
-    background-color: #007bff;
-    color: white;
-    padding: 10px;
-    border: none;
-    cursor: pointer;
-    width: 25rem;
+article p {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  margin: 0.5rem;
 }
 
-.dropdown-menu {
-    display: none;
-    position: absolute;
-    background-color: white;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 10px;
-    min-width: 150px;
+.select-container {
+  position: relative;
+  width: 300px; /* Ajusta el ancho según sea necesario */
+}
+.select-container.active .select-options {
+  display: block; /* Cambiar de 'none' a 'block' */
 }
 
-.dropdown-menu a {
-    display: block;
-    padding: 8px;
-    text-decoration: none;
-    color: black;
+.select-trigger {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #ccc; /* Color del borde */
+  background-color: #f8f8f8; /* Color de fondo del trigger */
+  cursor: pointer;
+  border-radius: 2px; /* Opcional: para bordes redondeados */
 }
 
-.dropdown-menu a:hover {
-    background-color: #f1f1f1;
+.select-trigger span {
+  font-size: 16px;
+  color: #333; /* Color del texto "Precio" */
+}
+
+.arrow-icon {
+  font-size: 16px;
+  color: #888; /* Color de la flecha */
+}
+
+.select-options {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-top: none;
+  display: none; /* Ocultar opciones por defecto */
+  z-index: 1;
+  border-radius: 5px; /* Opcional: para bordes redondeados */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Opcional: para sombra */
+}
+
+.select-options ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.select-options li {
+  padding: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  color: #333; /* Color del texto de las opciones */
+}
+
+.select-options li:hover {
+  background-color: #f0f0f0; /* Color de fondo al pasar el mouse */
 }
 
 .main1 {
-    display: flex;
-    flex-direction: column;
-    grid-area: main1;
-    justify-content: center;
-    align-items: center;
-    background: green;
-    
+  display: flex;
+  flex-direction: column;
+  grid-area: main1;
+  justify-content: center;
+  align-items: center;
+  background: green;
 }
 .main1 section {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 95%;
-    width: 90%;
-    /* width: 22rem; */
-    box-shadow: 2px 1px 5px black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 95%;
+  width: 90%;
+  /* width: 22rem; */
+  box-shadow: 2px 1px 5px black;
 }
-.main1 section p{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 1.5rem;
-    width: 100%;
-    margin: 0;
-    background-color: aqua;
-    
+.main1 section p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 1.5rem;
+  width: 100%;
+  margin: 0;
+  background-color: aqua;
 }
-.main1 section article a{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 3rem;
-    width: 8rem;
-    border: 1px solid black;
-    border-radius: 10px;
-    background-color: aqua; 
-    text-decoration: none;
-    color: black;
-    margin: 1rem;
-    
+.main1 section article a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 2.5rem;
+  width: 5rem;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: aqua;
+  text-decoration: none;
+  color: black;
+  margin: 0.2rem;
+  margin-bottom: 0.8rem;
 }
 
 /* .main1 section div img {
@@ -130,23 +169,87 @@ article p  {
     box-shadow: 2px 1px 5px black;
 } */
 .img1 {
-    justify-self: center;
-    align-items: center;
-    width: 100%;    
-    flex: 1 0 0;
-    background-color: brown;
+  justify-self: center;
+  align-items: center;
+  width: 100%;
+  flex: 1 0 0;
+  background-color: brown;
 }
 .pagina1 {
-    grid: pagina1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: yellow;
+  grid: pagina1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: yellow;
+}
+.pagination {
+  display: flex; /* Para alinear los elementos horizontalmente */
+  justify-content: center; /* Para centrar los elementos */
+  align-items: center; /* Para centrar verticalmente (opcional) */
+  font-size: .9rem;
+  padding-bottom: .7rem;
+}
+
+.pagination a {
+  color: blue;
+  padding: .3rem .9rem;
+  text-decoration: none;
+  border: 1px solid #ddd;
+  margin: 0 0px;
+  border-right: none;
+}
+.pagination a:first-child {
+    border-top-left-radius: 5px; /* Borde redondeado superior izquierdo */
+    border-bottom-left-radius: 5px; /* Borde redondeado inferior izquierdo */
+  }
+  
+.pagination a:last-child {
+  border-right: 1px solid #ddd; /* Agrega el borde derecho al último elemento */
+  border-top-right-radius: 5px; /* Borde redondeado superior derecho */
+  border-bottom-right-radius: 5px; /* Borde redondeado inferior derecho */
+}
+
+.pagination a.active {
+  background-color: blue;
+  color: white;
+  border: 1px solid blue;
+}
+
+.pagination a:hover:not(.active) {
+  background-color: #ddd;
 }
 .footer1 {
-    grid-area: footer1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: purple;
+  grid-area: footer1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: purple;
+  flex-direction: column;
+}
+.footer1 p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0.1rem;
+  margin-bottom: 0rem;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem; /* Espaciado entre los íconos */
+  margin-top: 0rem;
+}
+
+.social-link {
+  color: white; /* Cambia el color según tu diseño */
+  font-size: 1.5rem; /* Tamaño de los íconos */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.social-link:hover {
+  color: #007bff; /* Cambia el color al pasar el mouse */
 }
