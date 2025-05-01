@@ -8,7 +8,7 @@ body {
   padding-right: 0;
   height: 100vh;
   grid-template-columns: 1fr;
-  grid-template-rows: 3rem 6.5rem auto 4rem 6rem;
+  grid-template-rows: 0.7fr 1.1fr 6fr 0.7fr 0.9fr;
   grid-template-areas:
     "nav1"
     "order1"
@@ -22,7 +22,7 @@ body {
   justify-content: space-between;
   align-items: center;
   background: blue;
-  height: 3rem;
+  height: 0.7fr;
 }
 .nav1 div {
   display: flex;
@@ -186,23 +186,23 @@ article p {
   display: flex; /* Para alinear los elementos horizontalmente */
   justify-content: center; /* Para centrar los elementos */
   align-items: center; /* Para centrar verticalmente (opcional) */
-  font-size: .9rem;
-  padding-bottom: .7rem;
+  font-size: 0.9rem;
+  padding-bottom: 0.7rem;
 }
 
 .pagination a {
   color: blue;
-  padding: .3rem .9rem;
+  padding: 0.3rem 0.9rem;
   text-decoration: none;
   border: 1px solid #ddd;
   margin: 0 0px;
   border-right: none;
 }
 .pagination a:first-child {
-    border-top-left-radius: 5px; /* Borde redondeado superior izquierdo */
-    border-bottom-left-radius: 5px; /* Borde redondeado inferior izquierdo */
-  }
-  
+  border-top-left-radius: 5px; /* Borde redondeado superior izquierdo */
+  border-bottom-left-radius: 5px; /* Borde redondeado inferior izquierdo */
+}
+
 .pagination a:last-child {
   border-right: 1px solid #ddd; /* Agrega el borde derecho al último elemento */
   border-top-right-radius: 5px; /* Borde redondeado superior derecho */
@@ -252,4 +252,55 @@ article p {
 
 .social-link:hover {
   color: #007bff; /* Cambia el color al pasar el mouse */
+}
+.new-list {
+    display: flex;
+    flex-direction: column;
+    
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+}
+@media (max-width: 576px) {
+    .new-list {
+        display: none;
+    }
+}
+@media (min-width: 576px) {
+  body {
+    grid-template-columns: 1.5fr 7fr;
+    grid-template-rows: 1fr 1fr 6fr 1.5fr 0.7fr;
+    grid-template-areas:
+      "nav1 order1"
+      "nav1 main1"
+      "nav1 main1"
+      "footer1 main1"
+      "footer1 pagina1";
+  }
+  .nav1 {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    padding-top: 1rem;
+  }
+  nav .icon_bars {
+    display: none;
+  }
+  .fix1 {
+    display: flex;
+    flex-direction: column;  
+  } 
+  .social-link {
+    
+    font-size: 1rem;
+    margin: 0rem;
+  }
+  .footer1 p {
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1.1;
+    max-width: 200px;
+  }
 }
