@@ -22,17 +22,17 @@ body {
   background: blue;
   height: 0.7fr;
 }
-.nav1 div {
+
+.title1 {
   display: flex;
+  flex-direction: row;
   justify-content: center;
-  align-items: center;
-  margin: 0.5rem;
+  align-items: baseline;
+  margin-top: 1rem;
+  margin-left: 1rem;
   padding: 0;
 }
-.nav1 div p {
-  margin: 0;
-  margin-left: 0.1rem;
-}
+
 .nav1 i {
   padding-right: 0.5rem;
   font-size: 1.1rem;
@@ -62,21 +62,21 @@ article p {
 
 .select-container {
   position: relative;
-  width: 300px; /* Ajusta el ancho según sea necesario */
+  width: 70%; /* Ajusta el ancho del input para filtros */
 }
 .select-container.active .select-options {
-  display: block; /* Cambiar de 'none' a 'block' */
+  display: block;
 }
 
 .select-trigger {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px;
-  border: 1px solid #ccc; /* Color del borde */
-  background-color: #f8f8f8; /* Color de fondo del trigger */
+  padding: 6px;
+  border: 1px solid #ccc;
+  background-color: #f8f8f8;
   cursor: pointer;
-  border-radius: 2px; /* Opcional: para bordes redondeados */
+  border-radius: 2px; /* redondear borde del imput filtro */
 }
 
 .select-trigger span {
@@ -129,26 +129,25 @@ article p {
   .card1:nth-child(n + 2) {
     display: none;
   }
-
 }
 
 @media (min-width: 576px) {
   .main1 {
-    grid-template-columns: repeat(4, 410px);
+    align-items: center;
+    justify-content: flex-start;
+    grid-template-columns: repeat(4, 425px);
     grid-template-rows: repeat(2, 1fr);
     grid-template-areas:
       "card1 card1 card1 car1"
       "card1 card1 card1 car1";
-    overflow:auto;
-  } 
+    overflow: auto;
+  }
   .select-container {
     position: relative;
-    width: 90%; /* Ajusta el ancho según sea necesario */
+    width: 60%; /* Ajusta el ancho según sea necesario */
   }
   .select-trigger {
-    
-    padding: 3px 20px;
-    
+    padding: 1px 20px;
   }
   .card1 {
     display: flex;
@@ -156,17 +155,25 @@ article p {
     justify-content: center;
     align-items: center;
     height: 350px;
-    
+
     box-shadow: 2px 1px 5px black;
     margin: 10px;
   }
-  .main1 section article  {
+  .main1 section article {
     height: 90px;
   }
   .footer1 p {
     padding-top: 5px;
   }
-  
+  .title1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: baseline;
+    margin-top: 0rem;
+    margin-left: 0rem;
+    padding: 0;
+  }
 }
 
 .card1 {
@@ -213,7 +220,7 @@ article p {
   display: flex;
   flex-direction: column;
   flex: 1 0 0;
-  
+
   background-color: brown;
 }
 .pagina1 {
@@ -303,6 +310,9 @@ article p {
   padding: 0;
   margin: 0;
 }
+.new-list li {
+  margin: 3px 0px;
+}
 @media (max-width: 576px) {
   .new-list {
     display: none;
@@ -311,7 +321,7 @@ article p {
 @media (min-width: 576px) {
   body {
     grid-template-columns: 200px 7fr;
-    grid-template-rows: 1fr 1fr 6fr .3fr 0.7fr;
+    grid-template-rows: 0.7fr 1fr 6fr 0.3fr 0.7fr;
     grid-template-areas:
       "nav1 order1"
       "nav1 main1"
@@ -328,10 +338,7 @@ article p {
   nav .icon_bars {
     display: none;
   }
-  .fix1 {
-    display: flex;
-    flex-direction: column;
-  }
+
   .social-link {
     font-size: 1rem;
     margin: 0rem;
@@ -341,5 +348,15 @@ article p {
     font-size: 1rem;
     line-height: 1.1;
     max-width: 200px;
+  }
+  .order1 p {
+    display: flex;
+    align-items: center;
+    margin: 0.1rem 0;
+    height: 100%;
+  }
+  .select-container {
+    position: relative;
+    bottom: 5px;
   }
 }
