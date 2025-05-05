@@ -130,7 +130,7 @@ article p {
   align-items: center;
   background: green;
 }
-.main1 section {
+.main1 div {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -140,7 +140,7 @@ article p {
   /* width: 22rem; */
   box-shadow: 2px 1px 5px black;
 }
-.main1 section p {
+.main1 div p {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -149,7 +149,7 @@ article p {
   margin: 0;
   background-color: aqua;
 }
-.main1 section article a {
+.main1 div article a {
   display: flex;
   justify-content: center;
   align-items: center;
