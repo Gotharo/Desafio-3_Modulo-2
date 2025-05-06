@@ -2,6 +2,16 @@
   margin: 0;
   padding: 0;
 }
+
+:root {
+  --color-primario: #0A1931;
+  --color-secundario: #185ADB;
+  --color-terciario: #FFC947;
+  --color-cuaternario: #FEDDBE;
+  
+  
+}
+
 body {
   display: grid;
   height: 100vh;
@@ -19,8 +29,11 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: blue;
+  background: var(--color-primario);
   height: 0.7fr;
+}
+.nav1 section div  {
+  color: var(--color-cuaternario);
 }
 
 .title1 {
@@ -43,7 +56,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background: red;
+  background:var(--color-terciario);
 }
 .order1 p {
   display: flex;
@@ -52,6 +65,7 @@ body {
   font-size: 1.1rem;
   margin-top: 0.1rem;
   font-weight: 400;
+  color: var(--color-primario);
 }
 article p {
   display: flex;
@@ -74,7 +88,7 @@ article p {
   align-items: center;
   padding: 6px;
   border: 1px solid #ccc;
-  background-color: #f8f8f8;
+  background-color: whitesmoke;
   cursor: pointer;
   border-radius: 2px; /* redondear borde del imput filtro */
 }
@@ -123,11 +137,14 @@ article p {
 .main1 {
   display: grid;
   grid-area: main1;
-  background: green;
+  background: var(--color-cuaternario);
 }
 @media (max-width: 576px) {
   .card1:nth-child(n + 2) {
     display: none;
+  }
+  footer p {
+    color: whitesmoke;
   }
 }
 
@@ -193,7 +210,7 @@ article p {
   height: 1.5rem;
   width: 100%;
   margin: 0;
-  background-color: aqua;
+  background-color: var(--color-cuaternario);
 }
 .main1 section article a {
   display: flex;
@@ -203,12 +220,13 @@ article p {
   width: 5rem;
   border: 1px solid black;
   border-radius: 5px;
-  background-color: aqua;
+  background-color: var(--color-primario);
   text-decoration: none;
-  color: black;
+  color: var(--color-terciario);
   margin: 0.2rem;
   margin-bottom: 0.8rem;
 }
+
 
 .main1 section div img {
   max-width: 100%; /* Asegura que la imagen no exceda el ancho del contenedor */
@@ -221,14 +239,14 @@ article p {
   flex-direction: column;
   flex: 1 0 0;
 
-  background-color: brown;
+  background-color: var(--color-cuaternario);
 }
 .pagina1 {
   grid: pagina1;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: yellow;
+  background: var(--color-primario);
 }
 .pagination {
   display: flex; /* Para alinear los elementos horizontalmente */
@@ -239,7 +257,7 @@ article p {
 }
 
 .pagination a {
-  color: blue;
+  color: var(--color-terciario);
   padding: 0.3rem 0.9rem;
   text-decoration: none;
   border: 1px solid #ddd;
@@ -258,9 +276,9 @@ article p {
 }
 
 .pagination a.active {
-  background-color: blue;
+  background-color: var(--color-secundario);
   color: white;
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
 }
 
 .pagination a:hover:not(.active) {
@@ -271,7 +289,7 @@ article p {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: purple;
+  background: var(--color-secundario);
   flex-direction: column;
 }
 .footer1 p {
@@ -313,6 +331,12 @@ article p {
 .new-list li {
   margin: 3px 0px;
 }
+nav div ul li a {
+  text-decoration: none; /* Elimina el subrayado */
+  color: inherit; /* Hereda el color del elemento padre */
+  font-size: inherit; /* Hereda el tamaño de fuente del elemento padre */
+}
+
 @media (max-width: 576px) {
   .new-list {
     display: none;
@@ -348,6 +372,7 @@ article p {
     font-size: 1rem;
     line-height: 1.1;
     max-width: 200px;
+    color: whitesmoke;
   }
   .order1 p {
     display: flex;
