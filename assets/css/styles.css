@@ -24,6 +24,9 @@ body {
     "pagina1"
     "footer1";
 }
+body nav i {
+  color: var(--color-cuaternario);
+}
 .nav1 {
   grid-area: nav1;
   display: flex;
@@ -137,7 +140,11 @@ article p {
 .main1 {
   display: grid;
   grid-area: main1;
-  background: var(--color-cuaternario);
+  /* background: var(--color-cuaternario); */
+  background: linear-gradient(to top, var(--color-terciario), var(--color-primario)); /* Degradado de izquierda a derecha */
+
+  
+  
 }
 @media (max-width: 576px) {
   .card1:nth-child(n + 2) {
@@ -145,6 +152,11 @@ article p {
   }
   footer p {
     color: whitesmoke;
+  }
+  .main1 section p {
+    font-family: "Fjalla One", sans-serif;
+    font-weight: 600;
+    font-style: normal;
   }
 }
 
@@ -179,6 +191,11 @@ article p {
   .main1 section article {
     height: 90px;
   }
+  .main1 section p {
+    font-family: "Fjalla One", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+  }
   .footer1 p {
     padding-top: 5px;
   }
@@ -196,7 +213,7 @@ article p {
 .card1 {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   height: 90%;
   width: 90%;
@@ -210,7 +227,7 @@ article p {
   height: 1.5rem;
   width: 100%;
   margin: 0;
-  background-color: var(--color-cuaternario);
+  /* background-color: var(--color-cuaternario); */
 }
 .main1 section article a {
   display: flex;
@@ -237,9 +254,11 @@ article p {
 .img1 {
   display: flex;
   flex-direction: column;
-  flex: 1 0 0;
+  /* flex: 1 0 0; */
+  width: 100%;
+  max-height: 100%;
 
-  background-color: var(--color-cuaternario);
+  /* background-color: rgba(0, 0, 0, 0.3); */
 }
 .pagina1 {
   grid: pagina1;
