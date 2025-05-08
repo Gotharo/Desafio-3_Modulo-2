@@ -79,7 +79,7 @@ article p {
 
 .select-container {
   position: relative;
-  width: 70%; /* Ajusta el ancho del input para filtros */
+  width: 70%; 
 }
 .select-container.active .select-options {
   display: block;
@@ -93,17 +93,17 @@ article p {
   border: 1px solid #ccc;
   background-color: whitesmoke;
   cursor: pointer;
-  border-radius: 2px; /* redondear borde del imput filtro */
+  border-radius: 2px; 
 }
 
 .select-trigger span {
   font-size: 16px;
-  color: #333; /* Color del texto "Precio" */
+  color: #333; 
 }
 
 .arrow-icon {
   font-size: 16px;
-  color: #888; /* Color de la flecha */
+  color: #888; 
 }
 
 .select-options {
@@ -114,10 +114,10 @@ article p {
   background-color: white;
   border: 1px solid #ccc;
   border-top: none;
-  display: none; /* Ocultar opciones por defecto */
+  display: none; 
   z-index: 1;
-  border-radius: 5px; /* Opcional: para bordes redondeados */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Opcional: para sombra */
+  border-radius: 5px; 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
 }
 
 .select-options ul {
@@ -130,21 +130,18 @@ article p {
   padding: 10px;
   cursor: pointer;
   font-size: 16px;
-  color: #333; /* Color del texto de las opciones */
+  color: #333; 
 }
 
 .select-options li:hover {
-  background-color: #f0f0f0; /* Color de fondo al pasar el mouse */
+  background-color: #f0f0f0; 
 }
 
 .main1 {
   display: grid;
   grid-area: main1;
   /* background: var(--color-cuaternario); */
-  background: linear-gradient(to top, var(--color-terciario), var(--color-primario)); /* Degradado de izquierda a derecha */
-
-  
-  
+  background: linear-gradient(to top, var(--color-terciario), var(--color-primario)); 
 }
 @media (max-width: 576px) {
   .card1:nth-child(n + 2) {
@@ -173,7 +170,7 @@ article p {
   }
   .select-container {
     position: relative;
-    width: 60%; /* Ajusta el ancho según sea necesario */
+    width: 60%; 
   }
   .select-trigger {
     padding: 1px 20px;
@@ -246,9 +243,9 @@ article p {
 
 
 .main1 section div img {
-  max-width: 100%; /* Asegura que la imagen no exceda el ancho del contenedor */
-  height: auto; /* Mantiene la proporción de la imagen */
-  display: block; /* Elimina el espacio extra debajo de la imagen */
+  max-width: 100%; 
+  height: auto; 
+  display: block; 
   object-fit: cover;
 }
 .img1 {
@@ -268,9 +265,9 @@ article p {
   background: var(--color-primario);
 }
 .pagination {
-  display: flex; /* Para alinear los elementos horizontalmente */
-  justify-content: center; /* Para centrar los elementos */
-  align-items: center; /* Para centrar verticalmente (opcional) */
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
   font-size: 0.9rem;
   padding-bottom: 0.7rem;
 }
@@ -284,14 +281,14 @@ article p {
   border-right: none;
 }
 .pagination a:first-child {
-  border-top-left-radius: 5px; /* Borde redondeado superior izquierdo */
-  border-bottom-left-radius: 5px; /* Borde redondeado inferior izquierdo */
+  border-top-left-radius: 5px; 
+  border-bottom-left-radius: 5px; 
 }
 
 .pagination a:last-child {
-  border-right: 1px solid #ddd; /* Agrega el borde derecho al último elemento */
-  border-top-right-radius: 5px; /* Borde redondeado superior derecho */
-  border-bottom-right-radius: 5px; /* Borde redondeado inferior derecho */
+  border-right: 1px solid #ddd; 
+  border-top-right-radius: 5px; 
+  border-bottom-right-radius: 5px; 
 }
 
 .pagination a.active {
@@ -324,19 +321,19 @@ article p {
 .social-icons {
   display: flex;
   justify-content: center;
-  gap: 1rem; /* Espaciado entre los íconos */
+  gap: 1rem; 
   margin-top: 0rem;
 }
 
 .social-link {
-  color: white; /* Cambia el color según tu diseño */
-  font-size: 1.5rem; /* Tamaño de los íconos */
+  color: white; 
+  font-size: 1.5rem; 
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .social-link:hover {
-  color: #007bff; /* Cambia el color al pasar el mouse */
+  color: #007bff; 
 }
 .new-list {
   display: flex;
@@ -351,9 +348,9 @@ article p {
   margin: 3px 0px;
 }
 nav div ul li a {
-  text-decoration: none; /* Elimina el subrayado */
-  color: inherit; /* Hereda el color del elemento padre */
-  font-size: inherit; /* Hereda el tamaño de fuente del elemento padre */
+  text-decoration: none; 
+  color: inherit; 
+  font-size: inherit; 
 }
 
 @media (max-width: 576px) {
